@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Research | AI Privacy & Security Awareness</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">AI Privacy & Security Awareness</div>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a class="active" href="research.html">Research</a>
+      <a href="results.html">Results</a>
+      <a href="guidelines.html">Guidelines</a>
+      <a href="about.html">About</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Research Background</h1>
+    <p class="subtitle">
+      This page summarizes what AI tools typically do with user inputs and why privacy/security risks can happen.
+      (You’ll later add citations and sources here.)
+    </p>
+
+    <div class="card">
+      <h3>How AI Tools Use Data (High Level)</h3>
+      <ul>
+        <li><strong>User inputs:</strong> text you paste (messages, code, documents).</li>
+        <li><strong>Processing:</strong> the model generates responses from patterns learned during training.</li>
+        <li><strong>Storage:</strong> some services may store chats for quality, safety, or product improvement.</li>
+        <li><strong>Risk:</strong> sensitive info can be exposed through mistakes, leaks, or unsafe sharing habits.</li>
+      </ul>
+    </div>
+
+    <div class="card" style="margin-top:14px;">
+      <h3>Key Risks You’ll Cover</h3>
+      <ul>
+        <li>Oversharing sensitive data (personal info, passwords, private code)</li>
+        <li>Data retention / unclear privacy terms</li>
+        <li>Prompt injection & data exfiltration in AI workflows</li>
+        <li>Phishing/deepfakes enabled by generative AI</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="footer">© <span id="year"></span> Afrin Shaikh</footer>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
