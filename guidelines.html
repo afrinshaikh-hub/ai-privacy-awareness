@@ -2,48 +2,157 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Guidelines | AI Privacy & Security Awareness</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- Top Navigation -->
   <header class="topbar">
     <div class="brand">AI Privacy & Security Awareness</div>
-  <nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="research.html">Research</a>
-  <a href="results.html">Results</a>
-  <a class="active" href="guidelines.html">Guidelines</a>
-</nav>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="research.html">Research</a>
+      <a href="results.html">Results</a>
+      <a class="active" href="guidelines.html">Guidelines</a>
+    </nav>
   </header>
 
+  <!-- Main Content -->
   <main class="container">
+
     <h1>Safe & Ethical AI Use</h1>
-    <p class="subtitle">Practical rules to reduce privacy/security risk when using AI tools.</p>
+    <p class="subtitle">
+      Practical rules and real examples to reduce privacy and security risk when using AI tools.
+      The goal is to keep the benefits of AI while avoiding common mistakes that expose personal
+      data, confidential work, or sensitive information.
+    </p>
 
+    <!-- Section: Red Lines -->
     <div class="card">
-      <h3>What you should NOT paste into AI tools</h3>
+      <h3>What you should NOT paste into AI tools (red lines)</h3>
+      <p>
+        A simple rule: if it would be damaging if leaked, copied, or shared outside your control,
+        do not paste it into an AI tool.
+      </p>
       <ul>
-        <li>Passwords, API keys, authentication tokens</li>
-        <li>Social Security numbers, full addresses, banking info</li>
-        <li>Private school/work documents or confidential code</li>
-        <li>Anything you wouldn’t post publicly</li>
+        <li><strong>Passwords, API keys, auth tokens:</strong> GitHub tokens, AWS keys, school/work logins, “.env” files.</li>
+        <li><strong>Financial identifiers:</strong> bank account numbers, card numbers, tax documents, payment screenshots.</li>
+        <li><strong>Government IDs:</strong> SSN, passport numbers, driver’s license images, visa paperwork.</li>
+        <li><strong>Medical / highly personal data:</strong> diagnosis details, prescriptions, therapy notes, private family info.</li>
+        <li><strong>Confidential school/work content:</strong> internal emails, non-public documents, private source code.</li>
+        <li><strong>Anything you wouldn’t post publicly:</strong> if you’d be uncomfortable seeing it online, don’t share it.</li>
+      </ul>
+
+      <p style="margin-top:10px;">
+        <strong>Example:</strong> Instead of pasting “Here is my resume with my address and phone number,” paste a version
+        with placeholders: “Here is my resume (address removed). Please improve the bullet points.”
+      </p>
+    </div>
+
+    <!-- Section: Safer Alternatives -->
+    <div class="card" style="margin-top:16px;">
+      <h3>Safer alternatives to oversharing (use these instead)</h3>
+      <ul>
+        <li><strong>Use placeholders:</strong> replace names with “NAME,” companies with “COMPANY,” IDs with “ID#”.</li>
+        <li><strong>Summarize instead of uploading:</strong> describe the situation and only include what’s necessary.</li>
+        <li><strong>Share small excerpts:</strong> paste only the relevant paragraph instead of the entire document.</li>
+        <li><strong>Remove metadata:</strong> screenshots and PDFs can contain hidden details—crop and redact first.</li>
+      </ul>
+      <p style="margin-top:10px;">
+        <strong>Example:</strong> If you want AI help debugging, don’t paste private API keys or full config files.
+        Paste the error message + the relevant function only.
+      </p>
+    </div>
+
+    <!-- Section: Security Habits -->
+    <div class="card" style="margin-top:16px;">
+      <h3>Security habits when using AI for school, work, or projects</h3>
+      <ul>
+        <li><strong>Assume your prompt could be stored:</strong> treat prompts like semi-public notes.</li>
+        <li><strong>Use separate accounts if needed:</strong> personal vs school/work AI usage to reduce mixing sensitive info.</li>
+        <li><strong>Check privacy settings:</strong> look for history, data controls, and training preferences if available.</li>
+        <li><strong>Don’t trust outputs blindly:</strong> verify security advice, code suggestions, and links.</li>
+        <li><strong>Be careful with “paste your logs”:</strong> logs can include tokens, internal URLs, usernames, file paths.</li>
+      </ul>
+      <p style="margin-top:10px;">
+        <strong>Example:</strong> If AI generates a command to run in your terminal, read it first. A single command can
+        delete files, leak credentials, or expose system details if misused.
+      </p>
+    </div>
+
+    <!-- Section: Prompt Injection / Social Engineering -->
+    <div class="card" style="margin-top:16px;">
+      <h3>Watch out for AI-enabled scams (phishing, deepfakes, and prompt tricks)</h3>
+      <p>
+        AI can make scams look more realistic. Attackers can generate persuasive emails, fake voices, or
+        social media messages that appear legitimate.
+      </p>
+      <ul>
+        <li><strong>Phishing:</strong> AI-written messages that sound professional and personalized.</li>
+        <li><strong>Deepfakes:</strong> fake audio/video that imitates someone you know or a public figure.</li>
+        <li><strong>Prompt injection:</strong> malicious text that tries to manipulate an AI system into revealing data or ignoring rules.</li>
+      </ul>
+      <p style="margin-top:10px;">
+        <strong>Example:</strong> If you receive a “professor” email asking you to click a link and “verify your login,”
+        verify through an official channel first. AI makes these messages harder to spot.
+      </p>
+    </div>
+
+    <!-- Section: Ethics -->
+    <div class="card" style="margin-top:16px;">
+      <h3>Ethical use: how to use AI without crossing the line</h3>
+      <ul>
+        <li><strong>Be honest about AI assistance:</strong> follow your course or workplace policy for AI usage.</li>
+        <li><strong>Avoid plagiarism:</strong> use AI as a helper (outline, feedback, clarity), not as a replacement for your work.</li>
+        <li><strong>Respect privacy of others:</strong> don’t upload classmates’ work, private conversations, or sensitive info about people.</li>
+        <li><strong>Avoid harmful profiling:</strong> don’t use AI to make decisions about people based on stereotypes or sensitive traits.</li>
+      </ul>
+      <p style="margin-top:10px;">
+        <strong>Example:</strong> If you use AI to improve writing, keep your original ideas and citations, and use AI
+        for clarity and organization—not for inventing sources or facts.
+      </p>
+    </div>
+
+    <!-- Section: Verification -->
+    <div class="card" style="margin-top:16px;">
+      <h3>Verification checklist (especially for security and facts)</h3>
+      <p>
+        AI tools can be confidently wrong. Before trusting outputs, do quick verification.
+      </p>
+      <ul>
+        <li><strong>For code:</strong> read it line by line, test it, and check for unsafe patterns (hardcoded secrets, risky commands).</li>
+        <li><strong>For facts:</strong> cross-check with reliable sources (official docs, credible organizations, research papers).</li>
+        <li><strong>For links:</strong> don’t click unknown links from AI-generated content—type trusted URLs manually.</li>
+        <li><strong>For security advice:</strong> confirm against standards or trusted security resources.</li>
       </ul>
     </div>
 
-    <div class="card" style="margin-top:14px;">
-      <h3>Better habits</h3>
+    <!-- Section: Quick Do/Don't -->
+    <div class="card" style="margin-top:16px;">
+      <h3>Quick Do / Don’t Summary</h3>
       <ul>
-        <li>Use placeholders (e.g., “NAME”, “COMPANY”) instead of real identifiers</li>
-        <li>Summarize data instead of pasting the raw file</li>
-        <li>Check privacy settings (history, training, data controls)</li>
-        <li>Verify outputs — don’t blindly trust sensitive advice</li>
+        <li><strong>Do:</strong> use placeholders, minimize data shared, verify outputs, and keep sensitive info offline.</li>
+        <li><strong>Don’t:</strong> paste passwords, IDs, confidential files, private codebases, or anything you can’t afford to leak.</li>
       </ul>
+      <p style="margin-top:10px;">
+        If you follow these habits, you can still use AI effectively while lowering privacy and security risk.
+      </p>
     </div>
+
   </main>
 
-  <footer class="footer">© <span id="year"></span> Afrin Shaikh</footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <!-- Footer -->
+  <footer class="footer">
+    © <span id="year"></span> Afrin Shaikh — AI Privacy & Security Awareness
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
