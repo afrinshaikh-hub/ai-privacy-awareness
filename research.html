@@ -2,51 +2,195 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Research | AI Privacy & Security Awareness</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
+
+  <!-- Top Navigation -->
   <header class="topbar">
     <div class="brand">AI Privacy & Security Awareness</div>
-<nav class="nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a class="active" href="research.html">Research</a>
-  <a href="results.html">Results</a>
-  <a href="guidelines.html">Guidelines</a>
-</nav>
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a class="active" href="research.html">Research</a>
+      <a href="results.html">Results</a>
+      <a href="guidelines.html">Guidelines</a>
+    </nav>
   </header>
 
+  <!-- Main Content -->
   <main class="container">
+
     <h1>Research Background</h1>
+
     <p class="subtitle">
-      This page summarizes what AI tools typically do with user inputs and why privacy/security risks can happen.
-      (You’ll later add citations and sources here.)
+      This section provides a foundational overview of how artificial intelligence systems
+      operate, how they handle user data, and why privacy and security risks can emerge.
+      The goal is to establish the technical context necessary to understand the risks
+      discussed throughout this project.
     </p>
 
+    <!-- Section 1 -->
     <div class="card">
-      <h3>How AI Tools Use Data (High Level)</h3>
+      <h3>What Is Artificial Intelligence?</h3>
+      <p>
+        Artificial Intelligence (AI) refers to computer systems designed to perform tasks
+        that typically require human intelligence, such as language understanding,
+        pattern recognition, decision-making, and problem solving. Modern AI systems
+        often rely on large datasets and statistical models to generate outputs based
+        on learned patterns rather than explicit instructions.
+      </p>
+      <p>
+        Many AI tools used today—such as chatbots, recommendation systems, and image
+        generators—are powered by machine learning models trained on massive amounts
+        of data. While these systems can be highly effective, their reliance on data
+        introduces important privacy and security considerations.
+      </p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="card" style="margin-top:16px;">
+      <h3>Types of AI Relevant to This Project</h3>
+      <p>
+        This project primarily focuses on AI systems that directly interact with users
+        and process user-provided data. Key types include:
+      </p>
       <ul>
-        <li><strong>User inputs:</strong> text you paste (messages, code, documents).</li>
-        <li><strong>Processing:</strong> the model generates responses from patterns learned during training.</li>
-        <li><strong>Storage:</strong> some services may store chats for quality, safety, or product improvement.</li>
-        <li><strong>Risk:</strong> sensitive info can be exposed through mistakes, leaks, or unsafe sharing habits.</li>
+        <li>
+          <strong>Machine Learning (ML):</strong> Systems that learn patterns from data
+          rather than following fixed rules. These models may improve over time using
+          historical data.
+        </li>
+        <li>
+          <strong>Deep Learning:</strong> A subset of ML that uses neural networks with
+          many layers to model complex patterns, commonly used in language and image
+          processing.
+        </li>
+        <li>
+          <strong>Generative AI:</strong> Models that generate new content such as text,
+          images, or code based on learned representations (e.g., large language models).
+        </li>
       </ul>
     </div>
 
-    <div class="card" style="margin-top:14px;">
-      <h3>Key Risks You’ll Cover</h3>
+    <!-- Section 3 -->
+    <div class="card" style="margin-top:16px;">
+      <h3>How AI Tools Use User Data</h3>
+      <p>
+        Most AI tools require user input in order to function. This input may include
+        text prompts, uploaded documents, code snippets, or other forms of data.
+        Once provided, the AI system processes this input to generate a response.
+      </p>
       <ul>
-        <li>Oversharing sensitive data (personal info, passwords, private code)</li>
-        <li>Data retention / unclear privacy terms</li>
-        <li>Prompt injection & data exfiltration in AI workflows</li>
-        <li>Phishing/deepfakes enabled by generative AI</li>
+        <li>
+          <strong>User Inputs:</strong> Information directly provided by the user, such
+          as messages, files, or queries.
+        </li>
+        <li>
+          <strong>Processing:</strong> The AI model analyzes the input using learned
+          patterns from training data to produce an output.
+        </li>
+        <li>
+          <strong>Storage:</strong> Depending on the platform, inputs may be temporarily
+          or permanently stored for quality control, safety monitoring, or system improvement.
+        </li>
+      </ul>
+      <p>
+        From a data science perspective, this pipeline introduces potential risks if
+        sensitive information is entered, stored insecurely, or reused without clear
+        user awareness.
+      </p>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="card" style="margin-top:16px;">
+      <h3>Privacy Risks in AI Systems</h3>
+      <p>
+        Privacy risks arise when users unknowingly share personal or confidential
+        information with AI systems. Unlike traditional software, AI tools often
+        encourage open-ended input, which can increase the likelihood of oversharing.
+      </p>
+      <ul>
+        <li>Exposure of personal data through data leaks or system bugs</li>
+        <li>Unclear data retention policies and limited transparency</li>
+        <li>Reuse of user inputs for model improvement or analysis</li>
+        <li>Accidental disclosure of sensitive information through AI-generated outputs</li>
       </ul>
     </div>
+
+    <!-- Section 5 -->
+    <div class="card" style="margin-top:16px;">
+      <h3>Security Risks and Cybersecurity Concerns</h3>
+      <p>
+        From a cybersecurity perspective, AI systems introduce new attack surfaces.
+        These risks extend beyond traditional data breaches and include novel forms
+        of exploitation.
+      </p>
+      <ul>
+        <li>
+          <strong>Prompt Injection:</strong> Malicious inputs designed to manipulate
+          AI behavior or extract sensitive information.
+        </li>
+        <li>
+          <strong>Data Exfiltration:</strong> Techniques that attempt to retrieve stored
+          or inferred data from AI systems.
+        </li>
+        <li>
+          <strong>Phishing and Deepfakes:</strong> AI-generated content used to deceive
+          users or impersonate trusted entities.
+        </li>
+        <li>
+          <strong>Overreliance on AI:</strong> Users trusting AI-generated advice without
+          verification, leading to poor security decisions.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="card" style="margin-top:16px;">
+      <h3>Why User Awareness Matters</h3>
+      <p>
+        Many of the risks associated with AI are not purely technical, but behavioral.
+        Users may assume AI tools are private or secure without understanding how their
+        data is handled behind the scenes. This gap between perception and reality is a
+        central focus of this research.
+      </p>
+      <p>
+        By analyzing user behavior and awareness through survey data, this project aims
+        to highlight common misconceptions and emphasize the importance of informed and
+        responsible AI usage.
+      </p>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="card" style="margin-top:16px;">
+      <h3>Summary</h3>
+      <p>
+        Understanding AI privacy and security requires both technical knowledge and
+        awareness of user behavior. This research background establishes the foundation
+        for analyzing survey results and developing practical guidelines for safer and
+        more ethical AI use.
+      </p>
+      <p>
+        In later sections of this project, these concepts are applied to real-world
+        examples and user data to assess how well current users understand the risks
+        associated with modern AI tools.
+      </p>
+    </div>
+
   </main>
 
-  <footer class="footer">© <span id="year"></span> Afrin Shaikh</footer>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+  <!-- Footer -->
+  <footer class="footer">
+    © <span id="year"></span> Afrin Shaikh — AI Privacy & Security Awareness
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
