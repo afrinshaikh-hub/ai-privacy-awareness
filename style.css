@@ -1,29 +1,30 @@
 /* ===========================
    AI Privacy & Security Site
-   Light + Premium + Full Hero
-   (replacement of my old style.css for bigger banner)
+   Blue/Teal Premium + Full-Width Hero
+   (Replaced my old style.css)
    =========================== */
 
 :root{
-  /* Background */
-  --bg: #f6f8fc;
-  --bg2:#eef3fb;
+  /* Base palette (blue + teal) */
+  --bg1: #061826;   /* deep navy */
+  --bg2: #07263a;   /* blue */
+  --bg3: #0b3a52;   /* teal-blue */
 
   /* Surfaces */
-  --surface: rgba(255,255,255,0.78);
-  --surface2: rgba(255,255,255,0.92);
-  --border: rgba(15, 23, 42, 0.10);
+  --surface: rgba(255,255,255,0.06);
+  --surface2: rgba(255,255,255,0.085);
+  --border: rgba(255,255,255,0.12);
 
   /* Text */
-  --text: #0b1220;
-  --muted: rgba(11,18,32,0.72);
+  --text: #eef6ff;
+  --muted: rgba(238,246,255,0.78);
 
   /* Accent */
   --accent: #18c8b3;
 
   /* Shadows */
-  --shadow: 0 18px 55px rgba(2, 8, 23, 0.12);
-  --shadow2: 0 10px 26px rgba(2, 8, 23, 0.10);
+  --shadow: 0 18px 55px rgba(0,0,0,0.35);
+  --shadow2: 0 10px 26px rgba(0,0,0,0.25);
 }
 
 *{ box-sizing: border-box; }
@@ -34,21 +35,19 @@ html, body{
 }
 
 body{
-  /* Modern + “unique” (without importing fonts) */
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Inter, Roboto, Arial, sans-serif;
   color: var(--text);
 
-  /* Light premium background */
+  /* Remove gray vibe: use blue/teal layered gradients */
   background:
-    radial-gradient(1000px 520px at 12% 10%, rgba(24,200,179,0.18), rgba(24,200,179,0.00) 55%),
-    radial-gradient(950px 600px at 90% 0%, rgba(77,163,255,0.16), rgba(77,163,255,0.00) 55%),
-    linear-gradient(180deg, var(--bg) 0%, var(--bg2) 55%, #f7f9fe 100%);
+    radial-gradient(900px 520px at 12% 10%, rgba(24,200,179,0.22), rgba(24,200,179,0.00) 55%),
+    radial-gradient(1000px 700px at 92% 0%, rgba(64,158,255,0.22), rgba(64,158,255,0.00) 60%),
+    linear-gradient(180deg, var(--bg1) 0%, var(--bg2) 45%, var(--bg3) 100%);
 }
 
 /* ===========================
    Top Navigation
    =========================== */
-
 .topbar{
   position: sticky;
   top: 0;
@@ -58,7 +57,7 @@ body{
   justify-content:space-between;
   padding: 14px 20px;
 
-  background: rgba(255,255,255,0.78);
+  background: rgba(4, 18, 30, 0.72);
   border-bottom: 1px solid var(--border);
   backdrop-filter: blur(10px);
 }
@@ -69,7 +68,7 @@ body{
 }
 
 .nav a{
-  color: rgba(11,18,32,0.72);
+  color: rgba(238,246,255,0.80);
   text-decoration: none;
   margin-left: 14px;
   padding: 10px 14px;
@@ -79,31 +78,30 @@ body{
 
 .nav a:hover{
   color: var(--text);
-  background: rgba(15, 23, 42, 0.05);
+  background: rgba(255,255,255,0.07);
   transform: translateY(-1px);
 }
 
 .nav a.active{
-  color: #ffffff;
+  color: #062019;
   background: var(--accent);
-  font-weight: 800;
+  font-weight: 900;
   box-shadow: 0 10px 24px rgba(24,200,179,0.22);
 }
 
 /* ===========================
    Layout + Typography
    =========================== */
-
 .container{
   max-width: 1120px;
   margin: 0 auto;
-  padding: 28px 18px 58px;
+  padding: 26px 18px 58px;
 }
 
 h1{
-  margin: 8px 0 12px;
-  font-size: clamp(34px, 4.4vw, 56px);
-  line-height: 1.05;
+  margin: 8px 0 10px;
+  font-size: clamp(32px, 4.2vw, 54px);
+  line-height: 1.06;
   letter-spacing: -0.6px;
 }
 
@@ -113,15 +111,9 @@ h2{
   letter-spacing: -0.25px;
 }
 
-h3{
-  margin: 0 0 10px;
-  font-size: 20px;
-  letter-spacing: -0.2px;
-}
-
 p, li{
   font-size: 16.5px;
-  line-height: 1.78;
+  line-height: 1.75;
 }
 
 .subtitle{
@@ -131,9 +123,72 @@ p, li{
   line-height: 1.85;
 }
 
-/* For your “no-box” intro sections on home */
+/* ===========================
+   FULL-WIDTH HERO (edge-to-edge)
+   Title overlaps hero image
+   =========================== */
+
+/* This section breaks out of the centered container */
+.full-bleed-hero{
+  width: 100%;
+  margin: 0;
+}
+
+/* full width banner */
+.hero-banner{
+  width: 100%;
+  min-height: 72vh;
+  position: relative;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* no rounded corners so it feels like a real landing page */
+  border-bottom: 1px solid rgba(255,255,255,0.12);
+}
+
+/* overlay so text is readable on bright blues */
+.hero-banner::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.22) 55%, rgba(0,0,0,0.10) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.10) 0%, rgba(0,0,0,0.55) 100%);
+}
+
+/* inner content aligned to your site max width */
+.hero-inner{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 18px;
+  position: relative;
+  z-index: 1;
+
+  height: 100%;
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+}
+
+/* only “AI Privacy” goes on the image */
+.hero-title{
+  font-size: clamp(42px, 5vw, 72px);
+  font-weight: 950;
+  letter-spacing: -0.9px;
+  line-height: 1.02;
+  margin: 0;
+
+  color: #ffffff;
+  text-shadow: 0 16px 45px rgba(0,0,0,0.55);
+}
+
+/* ===========================
+   Intro text (below hero)
+   =========================== */
 .intro-text{
-  margin-top: 18px;
+  margin-top: 22px;
   max-width: 980px;
 }
 
@@ -143,29 +198,8 @@ p, li{
 }
 
 /* ===========================
-   Cards (content sections)
+   Tiles
    =========================== */
-
-.card{
-  background: linear-gradient(180deg, var(--surface2), var(--surface));
-  border: 1px solid var(--border);
-  border-radius: 18px;
-  padding: 18px 18px;
-  box-shadow: var(--shadow2);
-}
-
-.card p, .card li{
-  color: var(--muted);
-}
-
-.card ul{
-  margin: 10px 0 0 18px;
-}
-
-/* ===========================
-   Tiles (Home page buttons)
-   =========================== */
-
 .grid{
   margin-top: 26px;
   display: grid;
@@ -175,20 +209,20 @@ p, li{
 
 .tile{
   display: block;
-  background: rgba(255,255,255,0.86);
-  border: 1px solid var(--border);
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.13);
   border-radius: 18px;
   padding: 18px;
   text-decoration: none;
   color: var(--text);
   box-shadow: var(--shadow2);
-  transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+  transition: transform 0.16s ease, border-color 0.16s ease, background 0.16s ease;
 }
 
 .tile:hover{
   transform: translateY(-3px);
-  border-color: rgba(24,200,179,0.32);
-  box-shadow: 0 18px 44px rgba(2, 8, 23, 0.14);
+  border-color: rgba(24,200,179,0.35);
+  background: rgba(255,255,255,0.085);
 }
 
 .tile p{
@@ -198,130 +232,38 @@ p, li{
 }
 
 /* ===========================
-   FULL HERO BANNER (Home)
-   Centered bold text, works on blue/white image
+   Cards (for other pages)
    =========================== */
-
-.full-hero{
-  margin-top: 10px;
-  margin-bottom: 18px;
+.card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.05));
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 18px;
+  padding: 18px 18px;
+  box-shadow: var(--shadow2);
 }
 
-.full-hero-inner{
-  min-height: 78vh;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  border: 1px solid var(--border);
-
-  background-size: cover;
-  background-position: center;
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Overlay for readability on bright images */
-.full-hero-inner::before{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(1000px 600px at 50% 40%, rgba(0,0,0,0.25), rgba(0,0,0,0.55) 70%),
-    linear-gradient(180deg, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.55) 100%);
-}
-
-/* Soft “premium” tint so it feels cohesive with your accent */
-.full-hero-inner::after{
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    120deg,
-    rgba(24,200,179,0.10) 0%,
-    rgba(77,163,255,0.10) 40%,
-    rgba(255,255,255,0.00) 100%
-  );
-  mix-blend-mode: screen;
-  pointer-events: none;
-}
-
-.full-hero-content{
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  padding: 34px 26px;
-  max-width: 900px;
-}
-
-/* “Unique” hero typography feel: heavier, tighter, cleaner */
-.full-hero-content h1{
-  color: #fff;
-  margin: 0 0 12px;
-  font-weight: 900;
-  letter-spacing: -0.8px;
-  text-shadow: 0 12px 40px rgba(0,0,0,0.45);
-}
-
-/* Bigger subtitle than before so it’s not tiny/white */
-.full-hero-content .subtitle{
-  color: rgba(255,255,255,0.92);
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 1.85;
-  text-shadow: 0 12px 40px rgba(0,0,0,0.45);
-}
-
-/* Optional chips under hero text */
-.hero-chip-row{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-.hero-chip{
-  display: inline-block;
-  padding: 9px 13px;
-  border-radius: 999px;
-  background: rgba(255,255,255,0.18);
-  border: 1px solid rgba(255,255,255,0.26);
-  color: rgba(255,255,255,0.93);
-  font-size: 13.5px;
-  font-weight: 650;
-  backdrop-filter: blur(10px);
-}
+.card p, .card li{ color: var(--muted); }
+.card ul{ margin: 10px 0 0 18px; }
 
 /* ===========================
    Footer
    =========================== */
-
 .footer{
   padding: 18px;
   text-align: center;
-  color: rgba(11,18,32,0.62);
-  border-top: 1px solid var(--border);
-  background: rgba(255,255,255,0.72);
+  color: rgba(238,246,255,0.70);
+  border-top: 1px solid rgba(255,255,255,0.12);
+  background: rgba(4, 18, 30, 0.62);
   backdrop-filter: blur(10px);
 }
 
 /* ===========================
    Mobile
    =========================== */
-
 @media (max-width: 820px){
   .grid{ grid-template-columns: 1fr; }
-
-  .nav{ display: none; } /* simple mobile header */
-
-  .full-hero-inner{ min-height: 62vh; }
-
-  h1{ font-size: clamp(30px, 8vw, 44px); }
-
+  .nav{ display: none; }
+  .hero-banner, .hero-inner{ min-height: 58vh; }
+  .hero-title{ font-size: clamp(34px, 10vw, 52px); }
   p, li{ font-size: 16px; }
-
-  .full-hero-content .subtitle{ font-size: 16.5px; }
 }
