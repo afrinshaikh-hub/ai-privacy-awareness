@@ -563,3 +563,35 @@ p, li{
   .home-highlights{ grid-template-columns: 1fr; }
   .home-split{ grid-template-columns: 1fr; }
 }
+/* Hero spacing polish */
+.home-hero-stack{
+  max-width: 700px;     /* slightly narrower = cleaner */
+}
+
+.home-hero-subtitle{
+  margin-top: 18px;
+  line-height: 1.75;
+}
+
+.home-cta{
+  margin-top: 22px;
+  gap: 14px;
+}
+
+.home-chips{
+  margin-top: 22px;
+  gap: 12px;
+}
+
+.chip{
+  padding: 9px 12px;    /* a bit roomier */
+  font-size: 13px;
+}
+.chip{
+  background: rgba(255,255,255,0.035);
+  border-color: rgba(255,255,255,0.085);
+}
+.hero-banner, .hero-inner{
+  min-height: 68vh;
+}
+
