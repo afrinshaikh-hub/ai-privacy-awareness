@@ -21,36 +21,48 @@
     </nav>
   </header>
 
+  <!-- HERO (same banner as Home) -->
+  <section class="about-banner" style="background-image: url('hero.jpg');">
+    <div class="about-banner-inner">
+      <h1>About This Project</h1>
+      <p>
+        I am a Rutgers University student double-majoring in Computer Science and
+        Information Technology & Informatics (ITI). I created this project to explore
+        AI privacy and user awareness—specifically how people use AI tools, what kinds
+        of data they share, and whether they truly understand the security risks involved.
+      </p>
+    </div>
+  </section>
+
   <!-- Main Content -->
   <main class="container">
 
-    <h1>About This Project</h1>
+    <!-- Why I Chose This Topic (image + text) -->
+    <section class="nl-row">
+      <div class="nl-media">
+        <img src="images/about-privacy.jpg" alt="Privacy and security visual" loading="lazy" />
+      </div>
 
-    <p class="subtitle">
-      I am a Rutgers University student double-majoring in Computer Science and
-      Information Technology & Informatics (ITI). I created this project to explore
-      AI privacy and user awareness—specifically how people use AI tools, what kinds
-      of data they share, and whether they truly understand the security risks involved.
-    </p>
+      <div class="card nl-card">
+        <h3>Why I Chose This Topic</h3>
+        <p>
+          Artificial intelligence tools are becoming a regular part of everyday life,
+          especially for students and professionals who rely on them for learning,
+          productivity, and problem solving. While AI systems are powerful and convenient,
+          they often encourage open-ended input—sometimes leading people to share personal,
+          sensitive, or confidential information without realizing it.
+        </p>
+        <p>
+          As a student studying both Computer Science and ITI, I became increasingly
+          interested in the gap between how AI systems actually function and how users
+          perceive their safety. Many people trust AI tools without questioning what
+          happens behind the scenes. This project was created to investigate that gap
+          and bring awareness to the privacy and security implications of modern AI usage.
+        </p>
+      </div>
+    </section>
 
-    <div class="card">
-      <h3>Why I Chose This Topic</h3>
-      <p>
-        Artificial intelligence tools are becoming a regular part of everyday life,
-        especially for students and professionals who rely on them for learning,
-        productivity, and problem solving. While AI systems are powerful and convenient,
-        they often encourage open-ended input—sometimes leading people to share personal,
-        sensitive, or confidential information without realizing it.
-      </p>
-      <p>
-        As a student studying both Computer Science and ITI, I became increasingly
-        interested in the gap between how AI systems actually function and how users
-        perceive their safety. Many people trust AI tools without questioning what
-        happens behind the scenes. This project was created to investigate that gap
-        and bring awareness to the privacy and security implications of modern AI usage.
-      </p>
-    </div>
-
+    <!-- Project Goals (no image, just clean card) -->
     <div class="card" style="margin-top:16px;">
       <h3>Project Goals</h3>
       <p>
@@ -67,53 +79,66 @@
       </p>
     </div>
 
-    <div class="card" style="margin-top:16px;">
-      <h3>How the Survey Supports This Project</h3>
-      <p>
-        A major part of this project is an anonymous survey designed to measure user awareness
-        and everyday behaviors related to AI privacy and security. The survey helps connect
-        technical concepts to real user habits—showing whether people understand what AI tools
-        may store, what they choose to share, and what they assume is “safe” to input.
-      </p>
-      <p>
-        The questions focus on three areas:
-      </p>
-      <ul>
-        <li>
-          <strong>Usage patterns:</strong> how often people use AI tools and what they typically use them for
-          (schoolwork, writing help, coding, brainstorming, etc.).
-        </li>
-        <li>
-          <strong>Data-sharing behavior:</strong> whether users have ever entered personal information,
-          private documents, credentials, or sensitive details into AI tools.
-        </li>
-        <li>
-          <strong>Awareness and perception:</strong> whether users believe AI stores what they type,
-          whether they understand privacy settings, and how confident they feel about AI security.
-        </li>
-      </ul>
-      <p style="margin-top:10px;">
-        The survey results are summarized on the <strong>Results</strong> page using charts and key takeaways,
-        allowing me to compare user assumptions with realistic privacy and security risks.
-      </p>
-    </div>
+    <!-- Survey (reverse: text + image) -->
+    <section class="nl-row reverse">
+      <div class="nl-media">
+        <img src="images/about-survey.jpg" alt="Survey or analytics visual" loading="lazy" />
+      </div>
 
-    <div class="card" style="margin-top:16px;">
-      <h3>Connection to Computer Science & ITI</h3>
-      <p>
-        This project sits at the intersection of technical systems and human behavior.
-        From a Computer Science perspective, it relates to how AI systems process input,
-        store data, and introduce potential vulnerabilities. From an ITI perspective,
-        it focuses on user behavior, digital literacy, information security, and ethical
-        technology use.
-      </p>
-      <p>
-        By combining technical understanding with user-focused research, this project
-        reflects the interdisciplinary nature of modern technology challenges and
-        highlights the importance of designing and using AI systems responsibly.
-      </p>
-    </div>
+      <div class="card nl-card">
+        <h3>How the Survey Supports This Project</h3>
+        <p>
+          A major part of this project is an anonymous survey designed to measure user awareness
+          and everyday behaviors related to AI privacy and security. The survey helps connect
+          technical concepts to real user habits—showing whether people understand what AI tools
+          may store, what they choose to share, and what they assume is “safe” to input.
+        </p>
+        <p>The questions focus on three areas:</p>
+        <ul>
+          <li>
+            <strong>Usage patterns:</strong> how often people use AI tools and what they typically use them for
+            (schoolwork, writing help, coding, brainstorming, etc.).
+          </li>
+          <li>
+            <strong>Data-sharing behavior:</strong> whether users have ever entered personal information,
+            private documents, credentials, or sensitive details into AI tools.
+          </li>
+          <li>
+            <strong>Awareness and perception:</strong> whether users believe AI stores what they type,
+            whether they understand privacy settings, and how confident they feel about AI security.
+          </li>
+        </ul>
+        <p style="margin-top:10px;">
+          The survey results are summarized on the <strong>Results</strong> page using charts and key takeaways,
+          allowing me to compare user assumptions with realistic privacy and security risks.
+        </p>
+      </div>
+    </section>
 
+    <!-- CS & ITI (image + text) -->
+    <section class="nl-row">
+      <div class="nl-media">
+        <img src="images/about-intersection.jpg" alt="Technology and human behavior intersection visual" loading="lazy" />
+      </div>
+
+      <div class="card nl-card">
+        <h3>Connection to Computer Science &amp; ITI</h3>
+        <p>
+          This project sits at the intersection of technical systems and human behavior.
+          From a Computer Science perspective, it relates to how AI systems process input,
+          store data, and introduce potential vulnerabilities. From an ITI perspective,
+          it focuses on user behavior, digital literacy, information security, and ethical
+          technology use.
+        </p>
+        <p>
+          By combining technical understanding with user-focused research, this project
+          reflects the interdisciplinary nature of modern technology challenges and
+          highlights the importance of designing and using AI systems responsibly.
+        </p>
+      </div>
+    </section>
+
+    <!-- Intended For (no image, short clean card) -->
     <div class="card" style="margin-top:16px;">
       <h3>What This Site Is Intended For</h3>
       <p>
@@ -129,7 +154,7 @@
 
   <!-- Footer -->
   <footer class="footer">
-    © <span id="year"></span> Afrin Shaikh — AI Privacy & Security Awareness
+    © <span id="year"></span> Afrin Shaikh — AI Privacy &amp; Security Awareness
   </footer>
 
   <script>
