@@ -228,3 +228,97 @@ p, li{
   .hero-banner, .hero-inner{ min-height: 56vh; }
   .hero-title{ font-size: clamp(34px, 10vw, 52px); }
 }
+/* =========================
+   ABOUT PAGE: banner + newsletter rows
+   ========================= */
+
+.about-banner{
+  margin-top: 14px;
+  border-radius: 18px;
+  overflow: hidden;
+  min-height: 320px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.25);
+}
+
+.about-banner::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 10, 18, 0.78),
+    rgba(0, 10, 18, 0.35)
+  );
+}
+
+.about-banner-inner{
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 56px 22px;
+}
+
+.about-banner-inner h1{
+  margin: 0 0 10px 0;
+}
+
+.about-banner-inner p{
+  max-width: 820px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Newsletter rows */
+.nl-row{
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: 22px;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.nl-row.reverse{
+  grid-template-columns: 1.25fr 0.75fr;
+}
+
+.nl-row.reverse .nl-media{
+  order: 2;
+}
+.nl-row.reverse .nl-card{
+  order: 1;
+}
+
+.nl-media img{
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.nl-card{
+  margin-top: 0 !important;
+}
+
+@media (max-width: 900px){
+  .about-banner{
+    min-height: 280px;
+  }
+  .about-banner-inner{
+    padding: 40px 18px;
+  }
+  .nl-row,
+  .nl-row.reverse{
+    grid-template-columns: 1fr;
+  }
+  .nl-row.reverse .nl-media,
+  .nl-row.reverse .nl-card{
+    order: initial;
+  }
+  .nl-media img{
+    height: 220px;
+  }
+}
