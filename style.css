@@ -594,4 +594,56 @@ p, li{
 .hero-banner, .hero-inner{
   min-height: 68vh;
 }
+/* =========================
+   HERO — CLEAN, EDITORIAL
+   ========================= */
+
+.home-hero-layout{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 48px;
+  max-width: 1120px;
+  width: 100%;
+}
+
+.home-hero-stack{
+  max-width: 620px;
+}
+
+.home-hero-subtitle{
+  margin-top: 22px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(238,246,255,0.90);
+}
+
+/* Metadata tags (quiet, secondary) */
+.home-hero-tags{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  opacity: 0.75;
+}
+
+.home-hero-tags .chip{
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 13px;
+  padding: 8px 12px;
+}
+
+/* Mobile: stack, but keep calm */
+@media (max-width: 900px){
+  .home-hero-layout{
+    grid-template-columns: 1fr;
+    gap: 26px;
+  }
+
+  .home-hero-tags{
+    flex-direction: row;
+    flex-wrap: wrap;
+    opacity: 0.85;
+  }
+}
 
